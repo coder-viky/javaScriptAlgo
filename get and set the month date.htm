@@ -1,0 +1,42 @@
+<!DOCTYPE HTML> 
+<html> 
+	<head> 
+		<title> 
+			How to calculate the date 
+			three months prior to today 
+		</title> 
+	</head> 
+	
+	<body style = "text-align:center;"> 
+		
+		<h1 style = "color:green;" > 
+			GeeksForGeeks 
+		</h1> 
+		
+		<p id = "GFG_UP" style = 
+			"font-size: 19px; font-weight: bold;"> 
+		</p> 
+		
+		<button onClick = "GFG_Fun()"> 
+			click here 
+		</button> 
+		
+		<p id = "GFG_DOWN" style = 
+			"color: green; font-size: 24px; font-weight: bold;"> 
+		</p> 
+		
+		<script> 
+			var up = document.getElementById('GFG_UP'); 
+			var down = document.getElementById('GFG_DOWN'); 
+			var d = new Date(); 
+			
+			up.innerHTML = "Today's Date= "+ d.toLocaleDateString(); 
+			
+			function GFG_Fun() { 
+				d.setMonth(d.getMonth() - 3); 
+				down.innerHTML = "Before 3 Months, Date is " 
+						+ d.toLocaleDateString(); 
+			} 
+		</script> 
+	</body> 
+</html>					 
